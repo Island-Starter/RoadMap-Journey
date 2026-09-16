@@ -1,71 +1,94 @@
-html, body {
+* {
     margin: 0;
     padding: 0;
-    height: 100%;
-    width: 100%;
-    overflow-x: hidden;
+    box-sizing: border-box;
 }
 
 body {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://i.pinimg.com/originals/22/34/0c/22340c8d7f21754401de215d7f1eb8c5.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
-    width: 100vw;
-    height: 100vh;
+    background-color: #ffecd2;
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+        linear-gradient(in oklch to right, #fff0e5, #ffbfa3);
+    min-height: 100vh;
 }
 
-.top-container {
+
+header {
     display: flex;
     justify-content: space-between;
-    align-items: center; 
-    position: fixed;
-    top: 0;
-    left: 0;
+    align-items: center;
+    padding: 1rem 5%; 
     width: 100%;
-    box-sizing: border-box;
-    padding: 20px 80px 20px 40px; 
-    z-index: 1000;
 }
 
-.logo {
-  color: white;
-  font-size: 30px;
-  font-weight: bold;
-  line-height: 1; 
+header i {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    color: black;
 }
 
-.nav-links {
-    list-style: none;
-    margin: 0;
-    padding: 8px 16px; 
+
+nav ul {
     display: flex;
-    align-items: center;
+    gap: 40px; 
+    list-style: none;
 }
 
-.nav-links li {
+nav ul li {
     display: inline-block;
-    margin-right: 20px;
 }
 
-.nav-links li:last-child {
-    margin-right: 0; 
-}
-
-.nav-links a {
-    display: inline-flex;
-    align-items: center;
-    color: #d1cbd4; 
+ul li a {
+    color: black;
     text-decoration: none;
-    font-size: 20px;
-    padding: 4px 8px; 
-    line-height: 1; 
-    border-radius: 4px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.30rem;
+    font-style: oblique;
+    font-weight: 300;
+    white-space: nowrap; 
 }
 
-.nav-links a:hover {
-    background-color: rgba(146, 134, 154, 0.50); 
-    color: #ffffff; 
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; 
+        gap: 1rem;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-wrap: wrap; 
+        justify-content: center;
+    }
 }
+
+
+section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.title {
+    margin-top: 20em;
+    font-family: 'Poppins';
+}
+
+.title h1 {
+    font-size: xx-large;
+    color: rgb(238, 240, 238);
+}
+
+.title i {
+    font-size: 2em;
+    margin-top: 15px;
+    margin: 15px;
+    text-decoration: none;
+    
+}
+
+
+
+   
+
+
