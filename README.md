@@ -20,7 +20,7 @@ This repository contains my projects built based on the frontend developer roadm
 4. [Image Layout](https://island-starter.github.io/RoadMap-Journey/FrontEnd%20Project/Image%20Grid%20Layout/Grid%20Layout.html) 
 5. [Date Picker UI](https://island-starter.github.io/RoadMap-Journey/FrontEnd%20Project/DatePicker%20Ui/Datepick.html) 
 6. [Accessible Form UI](https://island-starter.github.io/RoadMap-Journey/FrontEnd%20Project/Form%20Ui/Form.html)
-7. [Tool Tip](https://github.com/Island-Starter/RoadMap-Journey/tree/master/FrontEnd%20Project/Tool%20Tip/Tool%Tip.html)
+7. [Tool Tip](https://github.com/Island-Starter/RoadMap-Journey/tree/master/FrontEnd%20Project/Tool%20Tip/Tool%20Tip.html)
 ---
 
 ## 🗂️ Project Reference
