@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <title>Calculator</title>
+</head>
+<body>
+    <div id="Calculator">
+
+        <input id="display" readonly>
+
+        <div id="keys">
+            <button onclick="clearDisplay('AC')" class="top-btn">AC</button>
+            <button onclick="deleteDisplay('Del')" class="top-btn"><i class="fa-solid fa-delete-left"></i></button>
+            <button onclick="appendToDisplay('%')" class="top-btn">%</button>
+            <button onclick="appendToDisplay('/')" class="operator-btn"><i class="fa-solid fa-divide"></i></button>
+            <button onclick="appendToDisplay('7')">7</button>
+            <button onclick="appendToDisplay('8')">8</button>
+            <button onclick="appendToDisplay('9')">9</button>
+            <button onclick="appendToDisplay('X')" class="operator-btn"><i class="fa-solid fa-x"></i></button>
+            <button onclick="appendToDisplay('4')">4</button>
+            <button onclick="appendToDisplay('5')">5</button>
+            <button onclick="appendToDisplay('6')">6</button>
+            <button onclick="appendToDisplay('-')" class="operator-btn"><i class="fa-solid fa-minus"></i></button>
+            <button onclick="appendToDisplay('1')">1</button>
+            <button onclick="appendToDisplay('2')">2</button>
+            <button onclick="appendToDisplay('3')">3</button>
+            <button onclick="appendToDisplay('+')" class="operator-btn"><i class="fa-solid fa-plus"></i></button>
+            <button id="zero" onclick="appendToDisplay('0')">0</button>
+            <button id="zero" onclick="appendToDisplay('00')">00</button>
+            <button onclick="appendToDisplay('.')">.</button>
+            <button onclick="calculate('=')" class="operator-btn">=</button>
+        </div>
+    </div>
+
+    <script src="cal.js"></script>
+    
+</body>
+</html>
