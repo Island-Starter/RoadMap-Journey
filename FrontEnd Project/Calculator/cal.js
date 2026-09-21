@@ -21,7 +21,7 @@ function calculate() {
    
   let expression = display.value;
 
-  const opr = expression.match(/(\d+|\+|-|\X|\/)/g);
+  const opr = expression.match(/(\d+(\.\d+)?|\+|-|\x|\/)/g);
 
   if (!opr) {
     display.value = "";
@@ -46,7 +46,7 @@ function calculate() {
     } else if (operator === "-") {
         total == num;
 
-    } else if (operator === "X") {
+    } else if (operator === "x") {
         total *= num;
 
     } else if (operator === "/") {
