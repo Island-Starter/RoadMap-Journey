@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flip Card</title>
+    <link rel="stylesheet" href="flipcard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+</head>
+<body>
+    
+    <div class="main-container">
+    <div class="top-container">
+        <h2> Flash Cards </h2>
+
+        <div class="bar">
+            <div class="progress">0%</div>
+            <div class="page"> <span id="demo"></span> of 5</div>
+        </div>
+    </div>
+
+   <div class="card-container">
+    
+     <div class="card">
+
+        <div class="front">
+        <h3 class="question"> Front Page </h3>
+        </div>
+
+      <div class="back">
+        <h3 class="answer"> Back Page</h3>
+      </div>
+
+     </div>
+
+   </div>
+
+    <div class="buttons">
+        <button id="Back" class="button1"> Back </button>
+        <button id="Answer" class="button"> Answer </button>
+        <button id="Next" class="button1"> Next </button>
+
+    </div>
+
+    </div>
+    
+    <script src="flip.js"></script>
+</body>
+</html>
