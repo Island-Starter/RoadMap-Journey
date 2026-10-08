@@ -23,6 +23,7 @@ This repository contains my projects built based on the frontend developer roadm
 7. [Tool Tip](https://island-starter.github.io/RoadMap-Journey/FrontEnd%20Project/Tool%20Tip/Tool%20Tip.html) 
 8. [Calculator](https://island-starter.github.io/RoadMap-Journey/FrontEnd%20Project/Calculator/calculator.html)
 9. [Timer](https://island-starter.github.io/RoadMap-Journey/Practice/timer.html)
+10. [Flash Card](https://island-starter.github.io/RoadMap-Journey/FrontEnd%20Project/FlashCard/flipcard.html)
 ---
 
 ## 🗂️ Project Reference
@@ -34,3 +35,4 @@ This repository contains my projects built based on the frontend developer roadm
 5. [Date Picker](https://roadmap.sh/projects/datepicker-ui) - Roadmap.sh
 6. [Accessible Form UI](https://roadmap.sh/projects/accessible-form-ui) - Roadmap.sh
 7. [Tool Tip](https://roadmap.sh/projects/tooltip-ui) - Roadmap.sh
+8. [Flash Card](https://roadmap.sh/projects/flash-cards) - Roadmap.sh
