@@ -27,6 +27,7 @@ body {
 }
 
 .bar {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -40,9 +41,12 @@ body {
 
 .page {
     position: absolute;
-    margin-right: 10px;
-    color: white;
-    right: 30%;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    color: black;
+    font-weight: bold;
+    white-space: nowrap;
 }
 
 .progress {
