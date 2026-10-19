@@ -1,0 +1,919 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+/* Base styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    min-height: 100dvh;
+    background-color: #e4f0ef;
+}
+
+/* Navigation */
+:root {
+    --sidebar-width: 250px;
+}
+
+.nav-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    width: var(--sidebar-width);
+    height: 100vh;
+    height: 100dvh;
+    background: linear-gradient(180deg, #e5f1f1 0%, #dcebea 100%);
+    transition: transform 0.4s ease;
+    transform: translateX(0);
+}
+
+.nav-container.opennavs {
+    transform: translateX(-100%);
+}
+
+.nav {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 0.25rem;
+    min-height: 0;
+    padding: 1.25rem 0.85rem 1rem;
+    overflow-y: auto;
+    font-size: 1rem;
+}
+
+.close-btn {
+    position: absolute;
+    top: 0.75rem;
+    right: -2rem;
+    z-index: 100;
+}
+
+.close {
+    display: grid;
+    width: 2rem;
+    height: 2rem;
+    place-items: center;
+    border: 0;
+    border-radius: 6px;
+    background-color: black;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.close:hover {
+    background-color: rgb(90, 90, 90);
+}
+
+.close:focus-visible {
+    outline: 3px solid #4c8f8f;
+    outline-offset: 3px;
+}
+
+/* Navigation branding and section heading */
+.logo-container {
+    display: flex;
+    width: 100%;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+    font-size: 1.05rem;
+    font-weight: 600;
+    text-align: left;
+}
+
+.logo {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+}
+
+.logo-container img {
+    display: block;
+    width: 2.25rem;
+    height: 2.25rem;
+    object-fit: contain;
+    border-radius: 0.65rem;
+    background-color: transparent;
+    mix-blend-mode: multiply;
+}
+
+.line-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin: 0.1rem 0 0.55rem;
+    padding: 0 0.65rem;
+    color: #788b8b;
+    font-size: 0.9rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+/* Navigation links */
+.home-container,
+.Appointment-container,
+.Message-container,
+.Medical-container,
+.bill-container,
+.setting-container,
+.profile-container,
+.logout-container {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex: 0 0 3rem;
+    min-width: 0;
+    padding: 0 0.65rem;
+    border-radius: 0.7rem;
+    color: #0c0c0c;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.home-container > span:first-child,
+.Appointment-container > span:first-child,
+.Message-container > span:first-child,
+.Medical-container > span:first-child,
+.bill-container > span:first-child,
+.setting-container > span:first-child,
+.profile-container > span:first-child,
+.logout-container > span:first-child {
+    flex: 0 0 1.25rem;
+    text-align: center;
+}
+
+.home-container > span:first-child,
+.Appointment-container > span:first-child,
+.Message-container > span:first-child,
+.Medical-container > span:first-child,
+.bill-container > span:first-child,
+.setting-container > span:first-child,
+.profile-container > span:first-child,
+.logout-container > span:first-child {
+    color: #050505;
+}
+
+/* Bottom navigation links */
+.bottom-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    margin-top: auto;
+    padding-top: 1rem;
+}
+
+/* Hover and active navigation states */
+.home-container.active,
+.Appointment-container.active,
+.Message-container.active,
+.Medical-container.active,
+.bill-container.active,
+.setting-container.active,
+.profile-container.active,
+.logout-container.active {
+    background-color: #ffffff;
+    color: #172222;
+    font-weight: 600;
+    transform: scale(1.03);
+}
+
+.home-container:hover,
+.Appointment-container:hover,
+.Message-container:hover,
+.Medical-container:hover,
+.bill-container:hover,
+.setting-container:hover,
+.profile-container:hover,
+.logout-container:hover {
+    background-color: #ffffff;
+    color: #172222;
+    transform: scale(1.03);
+}
+
+.home-container:hover > span:first-child,
+.Appointment-container:hover > span:first-child,
+.Message-container:hover > span:first-child,
+.Medical-container:hover > span:first-child,
+.bill-container:hover > span:first-child,
+.setting-container:hover > span:first-child,
+.profile-container:hover > span:first-child,
+.logout-container:hover > span:first-child {
+    color: inherit;
+}
+
+/* Main dashboard layout */
+.main-container {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    min-width: 0;
+    min-height: 100vh;
+    min-height: 100dvh;
+    margin-left: var(--sidebar-width);
+    gap: 1.25rem;
+    padding: 2rem 1.25rem 1.5rem 4rem;
+    transition: margin-left 0.4s ease;
+}
+
+body.nav-collapsed .main-container {
+    margin-left: 0;
+    padding-left: 4rem;
+}
+
+/* Dashboard title and search */
+.header-container {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(12rem, 15rem);
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.header {
+    color: #172222;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+.search-btn {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 0.65rem;
+    min-width: 0;
+    padding: 0.65rem 0.9rem;
+    border: 1px solid #d5e2e1;
+    border-radius: 0.75rem;
+    background-color: rgb(255 255 255 / 65%);
+    color: #657575;
+    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.search-btn input {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: #172222;
+    font: inherit;
+}
+
+.search-btn:focus-within {
+    border-color: #7eaead;
+    box-shadow: 0 0 0 3px rgb(76 143 143 / 15%);
+}
+
+.search-btn:hover {
+    box-shadow: 0 0.35rem 0.75rem rgb(23 34 34 / 12%);
+}
+
+/* Dashboard cards */
+.home-section {
+    display: grid;
+    flex: 1 1 auto;
+    grid-template-columns: minmax(0, 2fr) minmax(14rem, 1fr);
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    gap: 0.85rem;
+    width: 100%;
+    min-width: 0;
+    min-height: 0;
+    transition: 0.5s ease;
+}
+
+.home-section.out {
+    opacity: 0;
+    transform: scale(1.1);
+    transition: 0.5s ease;
+}
+
+.appoitment-home {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.calendar-home {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.medical-home {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.bill-home {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.appoitment-home,
+.calendar-home,
+.medical-home,
+.bill-home {
+    min-width: 0;
+    min-height: 0;
+    padding: 1.1rem;
+    overflow: hidden;
+    border: 1px solid rgb(220 231 229 / 80%);
+    border-radius: 1rem;
+    background-color: #ffffff;
+    box-shadow: 0 0.3rem 1rem rgb(37 69 67 / 5%);
+}
+
+.appoitment-home:hover,
+.calendar-home:hover,
+.medical-home:hover,
+.bill-home:hover {
+    box-shadow: 0 4px 12px;
+    transform: scale(1.1);
+    transition: 0.3s ease;
+}
+
+
+.calendar-home {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+    background-color: #f1f6e9;
+}
+
+.calendar-title {
+    color: #172222;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.calendar-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 0;
+}
+
+.calendar-current {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+}
+
+.calendar-caption {
+    color: #788b8b;
+    font-size: 0.62rem;
+    line-height: 1.2;
+}
+
+.calendar-selected-date {
+    color: #172222;
+    font-size: 0.78rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.calendar-controls {
+    display: flex;
+    gap: 0.25rem;
+}
+
+.calendar-nav {
+    display: grid;
+    width: 1.75rem;
+    height: 1.75rem;
+    place-items: center;
+    border: 0;
+    border-radius: 0.5rem;
+    background-color: #ffffff;
+    color: #354747;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.calendar-nav:hover {
+    background-color: #172222;
+    color: #ffffff;
+}
+
+.calendar-nav:focus-visible,
+.calendar-day:focus-visible {
+    outline: 2px solid #7eaead;
+    outline-offset: 2px;
+}
+
+.calendar-weekdays,
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    align-items: center;
+    text-align: center;
+}
+
+.calendar-weekdays {
+    color: #788b8b;
+    font-size: 0.58rem;
+    font-weight: 500;
+}
+
+.calendar-days {
+    flex: 1 1 auto;
+    grid-auto-rows: minmax(1.55rem, 1fr);
+    gap: 0.1rem 0;
+    min-height: 0;
+}
+
+.calendar-day {
+    display: grid;
+    width: 1.55rem;
+    height: 1.55rem;
+    place-items: center;
+    justify-self: center;
+    padding: 0;
+    border: 0;
+    border-radius: 0.5rem;
+    background: transparent;
+    color: #354747;
+    font: inherit;
+    font-size: 0.66rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.calendar-day:hover {
+    background-color: rgb(23 34 34 / 10%);
+}
+
+.calendar-day.outside-month {
+    color: #a5b0ad;
+}
+
+.calendar-day.is-selected {
+    background-color: #17191c;
+    color: #ffffff;
+}
+
+.appoitment-home {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    min-height: 0;
+    overflow: hidden;
+    overscroll-behavior: contain;
+}
+
+.appoitment-home,
+.app-card-list {
+    scrollbar-width: thin;
+    scrollbar-color: #aabbb8 transparent;
+}
+
+.appoitment-home::-webkit-scrollbar,
+.app-card-list::-webkit-scrollbar {
+    width: 0.35rem;
+}
+
+.appoitment-home::-webkit-scrollbar-thumb,
+.app-card-list::-webkit-scrollbar-thumb {
+    border-radius: 1rem;
+    background-color: #aabbb8;
+}
+
+.app-txt {
+    color: #172222;
+    font-size: 1.15rem;
+    font-weight: 600;
+    line-height: 1.35;
+}
+
+.appoitment-home p {
+    margin-top: 0.3rem;
+    color: #7b8989;
+    font-size: 0.8rem;
+}
+
+.app-card-list {
+    display: flex;
+    flex: 1 1 0;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 0.5rem;
+    margin-top: 0.4rem;
+    margin-right: 0.5rem;
+    min-height: 0;
+    padding-right: 0.3rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scrollbar-gutter: stable;
+    overscroll-behavior: contain;
+}
+
+.new-appointment-btn {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    gap: 0.55rem;
+    min-height: 2.5rem;
+    margin-top: 0.75rem;
+    padding: 0.5rem 0.75rem;
+    border: 0;
+    border-radius: 0.55rem;
+    background-color: #17191c;
+    color: #ffffff;
+    font-size: 0.8rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.new-appointment-btn:hover {
+    background-color: #303438;
+}
+
+.new-appointment-btn:focus-visible {
+    outline: 3px solid #7eaead;
+    outline-offset: 2px;
+}
+
+.app-card {
+    position: relative;
+    display: grid;
+    grid-template-columns: 2.9rem minmax(0, 1fr) 1.5rem;
+    grid-template-areas:
+        "image role dot"
+        "image day ."
+        "image time ."
+        "image name .";
+    align-items: center;
+    column-gap: 0.55rem;
+    row-gap: 0;
+    margin-top: 0.75rem;
+    margin-bottom: 0.6rem;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    padding: 0.6rem;
+    background-color: lightblue;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.app-card:hover {
+    box-shadow: 0 4px 12px;
+    transition: 0.5s ease;
+}
+
+.appoitment-home .app-card {
+    flex: 0 0 3.8rem;
+    height: 3.8rem;
+    grid-template-rows: repeat(4, minmax(0, 1fr));
+    margin: 0;
+    padding: 0.3rem;
+    max-width: 100%;
+}
+
+.app-card-dot {
+    grid-area: dot;
+    display: grid;
+    width: 1.25rem;
+    height: 1.25rem;
+    place-items: center;
+    padding: 0;
+    border: 0;
+    border-radius: 0.35rem;
+    background: transparent;
+    color: #354747;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.app-card-dot:hover {
+    background-color: rgb(23 34 34 / 10%);
+    color: #172222;
+}
+
+.dot-inside {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    position: absolute;
+    top: 0.25rem;
+    right: 2rem;
+    z-index: 2;
+    min-width: 7rem;
+    padding: 0.3rem;
+    border: 1px solid #e2e8e7;
+    border-radius: 0.6rem;
+    background-color: #ffffff;
+    box-shadow: 0 0.4rem 1rem rgb(23 34 34 / 14%);
+    transform: translateY(-0.25rem);
+    transition: opacity 0.15s ease, transform 0.15s ease, visibility 0.15s ease;
+}
+
+.dot-inside.dot {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+
+.remove {
+    display: block;
+    width: 100%;
+    padding: 0.55rem 0.7rem;
+    border: 0;
+    border-radius: 0.4rem;
+    background-color: transparent;
+    color: #b42318;
+    font: inherit;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-align: left;
+    cursor: pointer;
+}
+
+.remove:hover,
+.remove:focus-visible {
+    background-color: #fff1f0;
+    color: #8f1d14;
+    outline: none;
+}
+
+.remove:focus-visible {
+    box-shadow: inset 0 0 0 2px #b42318;
+}
+
+.app-img {
+    grid-area: image;
+    display: block;
+    width: 100%;
+    max-width: 2.65rem;
+    aspect-ratio: 1;
+    align-self: center;
+    justify-self: center;
+    overflow: hidden;
+    border-radius: 0.65rem;
+}
+
+.app-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: cover;
+    object-position: center;
+    border-radius: inherit;
+    image-rendering: auto;
+}
+
+.app-card-secondary {
+    background-color: #e8f1ff;
+}
+
+.app-card-role {
+    grid-area: role;
+    align-self: end;
+    color: #172222;
+    font-size: 0.8rem;
+    font-weight: 600;
+    line-height: 1.1;
+}
+
+.app-card-day {
+    grid-area: day;
+    align-self: end;
+    color: #718080;
+    font-size: 0.68rem;
+    line-height: 1.1;
+}
+
+.app-card-time {
+    grid-area: time;
+    color: #354747;
+    font-size: 0.7rem;
+    line-height: 1.1;
+}
+
+.app-card-name {
+    grid-area: name;
+    align-self: start;
+    color: #718080;
+    font-size: 0.68rem;
+    line-height: 1.1;
+}
+
+.app-card-time,
+.app-card-name,
+.app-card-role {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.data-container {
+    display: grid;
+    flex: 1 1 auto;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(3, minmax(0, 1fr));
+    grid-template-areas:
+        "name phone"
+        "gender address"
+        "age email";
+    gap: 0.65rem 1.25rem;
+    margin-top: 1.1rem;
+}
+
+.medical-home {
+    display: flex;
+    flex-direction: column;
+}
+
+.name-container {
+    display: flex;
+    flex-direction: column;
+    grid-area: name;
+}
+
+.data-container > div {
+    min-width: 0;
+}
+
+.data-container span {
+    overflow-wrap: anywhere;
+}
+
+.age-container {
+    display: flex;
+    flex-direction: column;
+    grid-area: age;
+}
+
+.phone-container {
+    display: flex;
+    flex-direction: column;
+    grid-area: phone;
+}
+
+.gender-container {
+    display: flex;
+    flex-direction: column;
+    grid-area: gender;
+}
+
+.address-container {
+    display: flex;
+    flex-direction: column;
+    grid-area: address;
+}
+
+.email-container {
+    display: flex;
+    flex-direction: column;
+    grid-area: email;
+}
+
+.line {
+    content: "";
+    background-color: #050505;
+    width: 100%;
+    height: 2px;
+}
+
+@media (min-width: 901px) and (min-height: 700px) {
+    .main-container {
+        height: 100dvh;
+        min-height: 0;
+        overflow: hidden;
+    }
+}
+
+
+/* Responsive dashboard cards */
+@media (max-width: 900px) {
+    .main-container {
+        min-height: 100dvh;
+    }
+
+    .home-section {
+        flex: 0 0 auto;
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: none;
+        min-height: auto;
+    }
+
+    .appoitment-home,
+    .calendar-home,
+    .medical-home,
+    .bill-home {
+        grid-column: 1;
+        grid-row: auto;
+        min-height: 15rem;
+    }
+
+    .appoitment-home .app-card {
+        flex: 0 0 4.75rem;
+        height: 4.75rem;
+        grid-template-columns: 3.25rem minmax(0, 1fr) 1.5rem;
+        grid-template-rows: repeat(4, minmax(0, 1fr));
+        padding: 0.4rem;
+    }
+
+    .appoitment-home {
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    .app-card-list {
+        flex: 0 0 auto;
+        margin-right: 0;
+        margin-top: 0.4rem;
+        padding-right: 0;
+        overflow: visible;
+    }
+
+    .app-img {
+        max-width: 3rem;
+    }
+}
+
+@media (min-width: 1400px) {
+    .main-container {
+        padding-right: 2rem;
+    }
+
+    .home-section {
+        gap: 1rem;
+    }
+
+    .appoitment-home,
+    .calendar-home,
+    .medical-home,
+    .bill-home {
+        padding: 1.4rem;
+    }
+}
+
+/* Responsive navigation and dashboard header */
+@media (max-width: 700px) {
+    :root {
+        --sidebar-width: min(250px, 82vw);
+    }
+
+    .nav-container {
+        z-index: 10;
+        box-shadow: 0.75rem 0 2rem rgb(24 50 50 / 12%);
+    }
+
+    .main-container {
+        min-height: 100dvh;
+        margin-left: 0;
+        padding: 2rem 1.25rem 1.25rem 4rem;
+        transition: none;
+    }
+
+    body.nav-collapsed .main-container {
+        margin-left: 0;
+    }
+
+    .header-container {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 0.75rem;
+    }
+
+    .header {
+        font-size: clamp(1.4rem, 6vw, 1.8rem);
+    }
+
+    .search-btn {
+        width: 100%;
+        justify-self: stretch;
+    }
+}
+
+/* Small-screen search layout */
+@media (max-width: 420px) {
+    .main-container {
+        padding-right: 1rem;
+    }
+}
+
+/* Accessibility: reduce animation for motion-sensitive users */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+    }
+}

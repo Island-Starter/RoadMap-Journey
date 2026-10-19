@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="web.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+    />
+    <title>Dentist Board</title>
+  </head>
+  <body>
+    <div class="nav-container" id="nav-sidebar">
+      <div class="close-btn">
+        <button
+          class="close"
+          type="button"
+          aria-label="Close navigation"
+          aria-controls="nav-sidebar"
+          aria-expanded="true"
+        >
+          <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <header class="nav">
+        <div class="logo-container">
+          <span class="logo"
+            ><img
+              src="https://img.magnific.com/premium-vector/dental-logo-template-vector-illustration-design_828162-1029.jpg?semt=ais_hybrid&w=740&q=80"
+              alt="logo"
+              class="remove-white-bg"
+          /></span>
+          <span class="logo-text"> Dentistry </span>
+        </div>
+
+        <div class="line-container">
+          <div class="menu">General</div>
+        </div>
+
+        <div class="home-container active">
+          <span class="home"><i class="fa-solid fa-house"></i></span>
+          <span class="home-text"> Home </span>
+        </div>
+
+        <div class="Appointment-container">
+          <span class="appointment"><i class="fa-solid fa-calendar"></i></span>
+          <span class="appointment-text"> Appointment </span>
+        </div>
+
+        <div class="Message-container">
+          <span class="message"><i class="fa-solid fa-envelope"></i></span>
+          <span class="message-text"> Message </span>
+        </div>
+
+        <div class="Medical-container">
+          <span class="medical"
+            ><i class="fa-solid fa-briefcase-medical"></i
+          ></span>
+          <span class="medical-text"> Medical Record </span>
+        </div>
+
+        <div class="bill-container">
+          <span class="bill"><i class="fa-solid fa-credit-card"></i></span>
+          <span class="bill-text"> Billing Report</span>
+        </div>
+
+        <div class="bottom-container">
+          <div class="setting-container">
+            <span class="setting"><i class="fa-solid fa-gear"></i></span>
+            <span class="setting-text"> Settings </span>
+          </div>
+
+          <div class="profile-container">
+            <span class="profile"><i class="fa-solid fa-circle-user"></i></span>
+            <span class="profile-text"> Profile </span>
+          </div>
+
+          <div class="logout-container">
+            <span class="logout"
+              ><i class="fa-solid fa-arrow-right-from-bracket"></i
+            ></span>
+            <span class="logout-text"> Logout </span>
+          </div>
+        </div>
+      </header>
+    </div>
+
+    <div class="main-container">
+      <div class="header-container">
+        <div class="header">Dashboard</div>
+
+        <div class="search-btn">
+          <span class="search-icon"><i class="fa-brands fa-sistrix"></i></span>
+          <input type="search" placeholder="Search" />
+        </div>
+      </div>
+
+      <div class="home-section">
+        <div class="appoitment-home">
+          <div class="app-txt">My Appointments</div>
+
+          <p>Your upcoming dental checkups and treatments</p>
+
+          <div class="app-card-list">
+            <div class="app-card">
+              <button
+                class="app-card-dot"
+                type="button"
+                aria-label="More options for Dr. Marie Jordan"
+              >
+                <i class="fa-solid fa-ellipsis" aria-hidden="true"></i>
+              </button>
+              <div class="dot-inside">
+                <button class="remove" type="button">Delete</button>
+              </div>
+              <span class="app-img"
+                ><img
+                  src="https://www.dentaltix.com/en/sites/default/files/dentist-dental-clinic.jpg"
+                  alt="dentist"
+                  loading="lazy"
+                  decoding="async"
+              /></span>
+              <span class="app-card-role"> Dentist </span>
+              <span class="app-card-day"> Monday, July 6, 2009 </span>
+              <span class="app-card-time"> 2:00PM - 2:40 PM </span>
+              <span class="app-card-name"> Dr. Marie Jordan</span>
+            </div>
+
+            <div class="app-card app-card-secondary">
+              <button
+                class="app-card-dot"
+                type="button"
+                aria-label="More options for Dr. James Wilson"
+              >
+                <i class="fa-solid fa-ellipsis" aria-hidden="true"></i>
+              </button>
+              <div class="dot-inside">
+                <button class="remove" type="button">Delete</button>
+              </div>
+              <span class="app-img"
+                ><img
+                  src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=640&h=640&q=90"
+                  alt="Dentist Dr. James Wilson"
+                  loading="lazy"
+                  decoding="async"
+              /></span>
+              <span class="app-card-role"> Dentist </span>
+              <span class="app-card-day"> Wednesday, July 8, 2009 </span>
+              <span class="app-card-time"> 3:00 PM - 3:40 PM </span>
+              <span class="app-card-name"> Dr. James Wilson</span>
+            </div>
+
+            <div class="app-card app-card-third">
+              <button
+                class="app-card-dot"
+                type="button"
+                aria-label="More options for Dr. Aisha Patel"
+              >
+                <i class="fa-solid fa-ellipsis" aria-hidden="true"></i>
+              </button>
+              <div class="dot-inside">
+                <button class="remove" type="button">Delete</button>
+              </div>
+              <span class="app-img"
+                ><img
+                  src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=640&h=640&q=90"
+                  alt="Dentist Dr. Aisha Patel"
+                  loading="lazy"
+                  decoding="async"
+              /></span>
+              <span class="app-card-role"> Dentist </span>
+              <span class="app-card-day"> Friday, July 10, 2009 </span>
+              <span class="app-card-time"> 4:00 PM - 4:40 PM </span>
+              <span class="app-card-name"> Dr. Aisha Patel</span>
+            </div>
+          </div>
+
+          <button class="new-appointment-btn" type="button">
+            <i class="fa-solid fa-plus" aria-hidden="true"></i>
+            <span>New Appointment</span>
+          </button>
+        </div>
+
+        <div class="calendar-home">
+          <h2 class="calendar-title">Calendar</h2>
+
+          <div class="calendar-toolbar">
+            <div class="calendar-current">
+              <span class="calendar-caption">Today</span>
+              <strong class="calendar-selected-date"></strong>
+            </div>
+            <div class="calendar-controls">
+              <button
+                class="calendar-nav"
+                type="button"
+                data-month-offset="-1"
+                aria-label="Previous month"
+              >
+                <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+              </button>
+              <button
+                class="calendar-nav"
+                type="button"
+                data-month-offset="1"
+                aria-label="Next month"
+              >
+                <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="calendar-weekdays" aria-hidden="true">
+            <span>Mon</span>
+            <span>Tue</span>
+            <span>Wed</span>
+            <span>Thu</span>
+            <span>Fri</span>
+            <span>Sat</span>
+            <span>Sun</span>
+          </div>
+
+          <div
+            class="calendar-days"
+            role="group"
+            aria-label="Calendar dates"
+          ></div>
+        </div>
+
+        <div class="medical-home">
+            <h3> Patient Data </h3>
+
+            <div class="line"></div>
+
+            <div class="data-container">
+
+
+              <div class="name-container">
+
+                <span class="name-text"> Patient Name </span>
+                <span class="name"> Loki James Jordan </span>
+              </div>
+              <div class="age-container">
+                <span class="age-txt"> Age </span>
+                <span class="age-number"> 22 year old</span>
+              </div>
+
+              <div class="phone-container">
+                <span class="phone-number"> Mobile Number</span>
+                <span class="phone"> 0973484 </span>
+              </div>
+
+              <div class="gender-container">
+                <span class="gender"> Gender </span>
+                <span class="gender-text"> Male </span>
+              </div>
+
+              <div class="address-container">
+
+                <span class="address-text"> Address </span>
+                <span class="address"> 8309 Barby Hill </span>
+              </div>
+
+              <div class="email-container">
+                <span class="email-text"> Email Address </span>
+                <span class="email"> willie@gmail.com </span>
+              </div>
+            </div>
+        </div>
+
+        <div class="bill-home">
+            <h3> Bill Report</h3>
+        </div>
+      </div>
+    </div>
+
+    <script src="web.js"></script>
+  </body>
+</html>
