@@ -510,9 +510,9 @@ body.nav-collapsed .main-container {
     justify-content: space-evenly;
     gap: 0.5rem;
     margin-top: 0.4rem;
-    margin-right: 0.5rem;
     min-height: 0;
     padding-right: 0.3rem;
+    padding-left: calc(0.55rem + 0.35rem);
     overflow-x: hidden;
     overflow-y: auto;
     scrollbar-gutter: stable;
@@ -740,6 +740,13 @@ body.nav-collapsed .main-container {
     flex-direction: column;
 }
 
+.medical-home h3 {
+    color: #172222;
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
 .name-container {
     display: flex;
     flex-direction: column;
@@ -747,11 +754,32 @@ body.nav-collapsed .main-container {
 }
 
 .data-container > div {
+    display: flex;
+    justify-content: center;
+    gap: 0.35rem;
     min-width: 0;
+    padding: clamp(0.75rem, 1vw, 1rem);
+    border: 1px solid #e6efed;
+    border-radius: 0.7rem;
+    background-color: #f6f9f8;
 }
 
 .data-container span {
     overflow-wrap: anywhere;
+}
+
+.data-container span:first-child {
+    color: #788b8b;
+    font-size: clamp(0.78rem, 1vw, 1rem);
+    font-weight: 500;
+    line-height: 1.35;
+}
+
+.data-container span:last-child {
+    color: #172222;
+    font-size: clamp(0.95rem, 1.15vw, 1.2rem);
+    font-weight: 500;
+    line-height: 1.4;
 }
 
 .age-container {
@@ -785,10 +813,10 @@ body.nav-collapsed .main-container {
 }
 
 .line {
-    content: "";
-    background-color: #050505;
+    flex: 0 0 1px;
     width: 100%;
-    height: 2px;
+    margin-top: 0.65rem;
+    background-color: #e2eae8;
 }
 
 @media (min-width: 901px) and (min-height: 700px) {
@@ -837,8 +865,8 @@ body.nav-collapsed .main-container {
 
     .app-card-list {
         flex: 0 0 auto;
-        margin-right: 0;
         margin-top: 0.4rem;
+        padding-left: 0;
         padding-right: 0;
         overflow: visible;
     }
