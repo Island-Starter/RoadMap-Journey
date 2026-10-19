@@ -339,8 +339,8 @@ body.nav-collapsed .main-container {
 .medical-home:hover,
 .bill-home:hover {
     box-shadow: 0 4px 12px;
-    transform: scale(1.1);
-    transition: 0.3s ease;
+    transform: scale(1.03);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 
@@ -862,6 +862,29 @@ body.nav-collapsed .main-container {
     .medical-home,
     .bill-home {
         padding: 1.4rem;
+    }
+}
+
+@media (min-width: 1600px) {
+    .home-section {
+        grid-template-columns: minmax(0, 1.75fr) minmax(19rem, 1fr);
+        gap: clamp(1rem, 1.25vw, 1.5rem);
+    }
+
+    .appoitment-home,
+    .calendar-home,
+    .medical-home,
+    .bill-home {
+        padding: clamp(1.4rem, 1.5vw, 1.8rem);
+    }
+
+    .appoitment-home .app-card {
+        flex-basis: clamp(4.75rem, 4vw, 5.75rem);
+        height: clamp(4.75rem, 4vw, 5.75rem);
+    }
+
+    .app-card-list {
+        gap: clamp(0.5rem, 0.8vw, 1rem);
     }
 }
 
